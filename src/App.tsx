@@ -2,12 +2,12 @@ import { Button } from "antd";
 import "./App.css";
 
 function App() {
-  const title = "Template Web React";
+  const title = "TODO App";
 
   return (
     <>
       <h1>{title}</h1>
-      <p> This is a base web react</p>
+      <p> This is a TODO app</p>
       <Button type="primary">Click me</Button>
     </>
   );
