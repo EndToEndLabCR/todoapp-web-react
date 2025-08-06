@@ -1,5 +1,5 @@
-import { Button } from "antd";
 import "./App.css";
+import { Task } from "./features/task/Task";
 
 function App() {
   const title = "TODO App";
@@ -7,8 +7,7 @@ function App() {
   return (
     <>
       <h1>{title}</h1>
-      <p> This is a TODO app</p>
-      <Button type="primary">Click me</Button>
+      <Task />
     </>
   );
 }
