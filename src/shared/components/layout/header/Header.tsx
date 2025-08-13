@@ -1,5 +1,5 @@
 import { Layout, Badge, Avatar, Dropdown } from "antd";
-import { UserOutlined, DownOutlined } from "@ant-design/icons";
+import { UserOutlined, DownOutlined, BellOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 
 const { Header } = Layout;
@@ -30,11 +30,12 @@ export function AppHeader() {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
         <div>¡Hola! Génesis</div>
         <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
+          <Badge count={3} size="small">
+            <BellOutlined style={{ color: "white", fontSize: "18px" }} />
+          </Badge>
           <Dropdown menu={{ items: userMenuItems }} placement="bottomRight">
             <div style={{ display: "flex", alignItems: "center", gap: "8px", cursor: "pointer" }}>
-              <Badge count={3} size="small">
-                <Avatar size="large" icon={<UserOutlined />} />
-              </Badge>
+              <Avatar size="large" icon={<UserOutlined />} />
               <DownOutlined style={{ color: "white" }} />
             </div>
           </Dropdown>
