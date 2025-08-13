@@ -1,3 +1,4 @@
+import { PlusOutlined } from "@ant-design/icons";
 import { Button, Input, Space } from "antd";
 import "./Task.scss";
 import { useState } from "react";
@@ -13,8 +14,9 @@ export function Task() {
     <>
       <Space.Compact style={{ width: "100%" }}>
         <Input placeholder="Add a new task" value={inputTask} onChange={(e) => setInputTask(e.target.value)} />
-        <Button type="primary" onClick={handleAddTask}>
-          Add
+          <Button type="primary" onClick={handleAddTask}>
+            Add
+            <PlusOutlined />
         </Button>
       </Space.Compact>
     </>
