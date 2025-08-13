@@ -1,14 +1,40 @@
 import "./App.css";
-import { Task } from "./features/task/Task";
+
+import { Layout, theme } from "antd";
+import { AppFooter } from "./shared/components/layout/footer/Footer";
+import { SiderMenu } from "./shared/components/layout/sider-menu/SiderMenu";
+import { AppHeader } from "./shared/components/layout/header/Header";
+
+const { Content } = Layout;
 
 function App() {
-  const title = "TODO App";
+  const {
+    token: { colorBgContainer, borderRadiusLG },
+  } = theme.useToken();
 
   return (
-    <>
-      <h1>{title}</h1>
-      <Task />
-    </>
+    <Layout style={{ minHeight: "100vh" }}>
+      <SiderMenu />
+
+      <Layout>
+        <AppHeader />
+
+        <Content style={{ margin: "24px 16px 0" }}>
+          <div
+            style={{
+              padding: 24,
+              minHeight: 360,
+              background: colorBgContainer,
+              borderRadius: borderRadiusLG,
+            }}
+          >
+            content
+          </div>
+        </Content>
+
+        <AppFooter />
+      </Layout>
+    </Layout>
   );
 }
 
