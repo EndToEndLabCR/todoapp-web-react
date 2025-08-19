@@ -4,6 +4,7 @@ import { Layout, theme } from "antd";
 import { AppFooter } from "./shared/components/layout/footer/Footer";
 import { SiderMenu } from "./shared/components/layout/sider-menu/SiderMenu";
 import { AppHeader } from "./shared/components/layout/header/Header";
+import { AppRoutes } from "./routes/AppRoutes";
 
 const { Content } = Layout;
 
@@ -28,7 +29,7 @@ function App() {
               borderRadius: borderRadiusLG,
             }}
           >
-            content
+            <AppRoutes />
           </div>
         </Content>
 
