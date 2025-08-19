@@ -1,16 +1,17 @@
-🛠 Tech Stack
-Frontend:
+# 🛠 Tech Stack
 
-    React with TypeScript: Build the user interface.
-    Ant Design: Create a polished and responsive UI.
-    Redux Toolkit: Manage global state (e.g., user, projects, and tasks).
-    Vite: Fast development and build tool.
-    Figma: Design the app layout and user experience.
+## Frontend
 
-Backend:
+- **React with TypeScript**: Used to build a dynamic and type-safe user interface.
+- **Ant Design**: Provides a polished and responsive UI component library.
+- **Redux Toolkit**: Simplifies global state management for user, projects, and tasks.
+- **Vite**: Ensures fast development and build processes.
+- **Figma**: Utilized for designing the app layout and user experience.
 
-    FastAPI: Build the RESTful API service.
-    PostgreSQL: Store user, project, and task data.
-    SQLAlchemy: ORM for database operations.
-    Celery (Optional): Schedule background tasks for notifications.
-    Redis (Optional): Task queue for Celery.
+## Backend
+
+- **FastAPI**: A modern web framework for building RESTful API services.
+- **PostgreSQL**: A robust relational database for storing user, project, and task data.
+- **SQLAlchemy**: An ORM for efficient and flexible database operations.
+- **Celery (Optional)**: Handles background tasks like sending notifications.
+- **Redis (Optional)**: Serves as a task queue for Celery to manage asynchronous operations.

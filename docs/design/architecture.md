@@ -1,20 +1,19 @@
 # 🏗 Architecture Overview
 
-    Frontend:
-        React app connects to the FastAPI backend via REST APIs.
-        Ant Design components are used for UI elements like forms, tables, and modals.
+## Frontend
 
-    Backend:
-        FastAPI handles user authentication (JWT/OAuth2), project, and task management endpoints.
-        Task due reminders and notifications are sent using Celery.
+- **React App**: Connects to the FastAPI backend via REST APIs.
+- **Ant Design**: Provides UI elements like forms, tables, and modals.
 
-    Database:
-        PostgreSQL stores user, project, and task data.
-        Use SQLAlchemy to define models and perform database queries.
+## Backend
 
-Architecture Guidelines for TODO App
+- **FastAPI**: Handles user authentication (JWT/OAuth2), project, and task management endpoints.
+- **Celery**: Sends task due reminders and notifications.
 
-This document outlines the architectural principles, benefits, and project structure for the TODO app. The backend is designed using **Hexagonal Architecture**, **Vertical Slicing**, and **Screaming Architecture** principles to ensure scalability, maintainability, and clarity.
+## Database
+
+- **PostgreSQL**: Stores user, project, and task data.
+- **SQLAlchemy**: Defines models and performs database queries.
 
 ---
 
@@ -66,7 +65,7 @@ The project structure reflects the application's business domain rather than tec
 
 ## 🏗 Project Structure
 
-### Backend
+### Backend Structure
 
 ```plaintext
 src/
@@ -91,7 +90,7 @@ src/
 ├── main.py              # FastAPI entry point
 ```
 
-### Frontend
+### Frontend Structure
 
 ```plaintext
 src/
