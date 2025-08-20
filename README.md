@@ -1,10 +1,12 @@
-# Project Name
+# TODO App
 
-A brief description of your project. Explain what the project does, its primary purpose, and who its intended users are.
+A simple and efficient TODO application built with modern web technologies. This app allows users to organize their tasks effectively, offering features like task creation, modification, and deletion, with a sleek and responsive user interface.
+
+---
 
 ## 📑 Table of Contents
 
-- [Project Name](#project-name)
+- [TODO App](#todo-app)
   - [📑 Table of Contents](#-table-of-contents)
   - [✨ Features](#-features)
   - [🛠️ Technologies Used](#️-technologies-used)
@@ -17,90 +19,111 @@ A brief description of your project. Explain what the project does, its primary 
   - [📚 Additional Links](#-additional-links)
   - [🤝 Contributing](#-contributing)
 
+---
+
 ## ✨ Features
 
-- List your main features here
-- Example: User authentication
-- Example: RESTful API
-- Example: Responsive UI
+- Add, update, and delete tasks.
+- Mark tasks as completed.
+- Responsive and mobile-friendly design using **Ant Design**.
+- State management with **Redux Toolkit**.
+- Fast development and build process with **Vite**.
 
-[⬆️ Back to Top](#project-name)
+[⬆️ Back to Top](#todo-app)
+
+---
 
 ## 🛠️ Technologies Used
 
-- [Tech 1](https://link-to-tech.com)
-- [Tech 2](https://link-to-tech.com)
-- [Tech 3](https://link-to-tech.com)
+This project leverages the following technologies:
+
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [TypeScript](https://www.typescriptlang.org/) - Strongly typed programming language that builds on JavaScript.
+- [Ant Design](https://ant.design/) - A comprehensive design system for enterprise applications.
+- [Redux](https://redux.js.org/) - A predictable state container for JavaScript apps.
+- [Redux Toolkit](https://redux-toolkit.js.org/) - The official, recommended way to write Redux logic.
+- [Vite](https://vitejs.dev/) - A fast development build tool optimized for modern web projects.
+
+---
 
 ## 🚀 Getting Started
 
 ### ⚙️ Prerequisites
 
-- List required software (e.g., Node.js, Python, Docker)
-- Specify supported operating systems, if relevant
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v14 or above)
+- [npm](https://www.npmjs.com/)
 
 ### 💾 Installation
 
 ```sh
 # Clone the repository
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/<your-account>/todoapp-web-react.git
+cd todoapp-web-react
 
 # Install dependencies
 npm install
-# or
-yarn install
 ```
 
-[⬆️ Back to Top](#project-name)
+[⬆️ Back to Top](#todo-app)
+
+---
 
 ### 🏃 Running the App
 
 ```sh
-npm start
-# or
-yarn start
+# Start the development server
+npm run dev
 ```
 
-Access the app at `http://localhost:3000` (or specify another port if needed).
+Access the app at `http://localhost:5173` (or another specified port).
+
+---
 
 ## 📝 Configuration
 
-- List and describe environment variables or configuration files needed.
-- Example:
-  - `API_URL` - The endpoint for the backend API
-  - `PORT` - The port number to run the app
+The following environment variables are required for the app to run:
 
-[⬆️ Back to Top](#project-name)
+- `VITE_API_URL` - The endpoint for the backend API.
+- `VITE_APP_PORT` - The port number to run the app.
+
+You can configure these in a `.env` file at the root of the project.
+
+Example `.env` file:
+
+```sh
+VITE_API_URL=http://localhost:5173
+VITE_APP_PORT=5173
+```
+
+[⬆️ Back to Top](#todo-app)
+
+---
 
 ## 🔗 Important Links to Have at Hand
 
-- [Project Board](#)
-- [Open Issues](#)
-- [Latest Releases](#)
-- [Production URL](#)
-- [API Documentation](#)
+- [Production Page](https://todoapp.example.com)
+- [Open Issues](https://github.com/EndToEndLabCR/todoapp-web-react/issues)
 
 ## 📚 Additional Links
 
-- [Design Documents](#)
-- [Contributing Guide](#)
-- [Code of Conduct](#)
-- [Changelog](#)
-- [FAQ](#)
+- [Design Documents](./docs/design/overview.md)
+
+---
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please follow these steps:
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/YourFeature`
-3. Commit your changes: `git commit -am 'Add feature'`
-4. Push to the branch: `git push origin feature/YourFeature`
-5. Open a pull request
+1. Fork the repository.
+2. Create a feature branch: `git checkout -b feature/YourFeature`.
+3. Commit your changes: `git commit -m 'Add feature'`.
+4. Push to the branch: `git push origin feature/YourFeature`.
+5. Open a pull request.
 
 ---
 
-_Built with ❤️ by [Your Name](https://github.com/your-username)_
+[⬆️ Back to Top](#todo-app)
 
-[⬆️ Back to Top](#project-name)
+_Built with ❤️ by [EndToEndLabCR](https://github.com/EndToEndLabCR)_
