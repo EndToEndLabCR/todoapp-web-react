@@ -1,29 +1,28 @@
-import React from "react";
-import { UploadOutlined, UserOutlined, VideoCameraOutlined } from "@ant-design/icons";
-
+import React, { useState } from "react";
 import { Layout, Menu } from "antd";
+import { groupedMenuItems } from "./menuData";
+import "./SiderMenu.css";
+
 const { Sider } = Layout;
 
-const items = [UserOutlined, VideoCameraOutlined, UploadOutlined, UserOutlined].map((icon, index) => ({
-  key: String(index + 1),
-  icon: React.createElement(icon),
-  label: `Item ${index + 1}`,
-}));
-
 export function SiderMenu() {
+  const [selectedKey, setSelectedKey] = useState("todo-1");
+
   return (
     <Sider
       breakpoint="lg"
       collapsedWidth="0"
-      onBreakpoint={(broken) => {
-        console.log(broken);
-      }}
-      onCollapse={(collapsed, type) => {
-        console.log(collapsed, type);
-      }}
+      onBreakpoint={(broken) => console.log(broken)}
+      onCollapse={(collapsed, type) => console.log(collapsed, type)}
+      className="sider-container"
     >
-      <div className="demo-logo-vertical" />
-      <Menu theme="dark" mode="inline" defaultSelectedKeys={["4"]} items={items} />
+      <Menu
+        theme="dark"
+        mode="inline"
+        selectedKeys={[selectedKey]}
+        onClick={({ key }) => setSelectedKey(key)}
+        items={groupedMenuItems()}
+      />
     </Sider>
   );
 }
