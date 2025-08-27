@@ -15,12 +15,12 @@ export function AppFooter() {
       <YoutubeOutlined className="youtube-icon"/>
     </a>
 
-    <a href="https://github.com/EndToEndLabCR" target="_blank">
+    <a href="https://discord.gg/EdtfSM4tXm" target="_blank">
       <DiscordOutlined className="discord-icon"/>
     </a>
 
-    <div className = "footer-text" style={{ marginTop: "15px" }}>
-    TODO App ©{new Date().getFullYear()} Created by EndToEndLabCR
+    <div className = "footer-text">
+    To-Do App ©{new Date().getFullYear()} Created by EndToEndLabCR
     </div>
     
     </Footer>);
