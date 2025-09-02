@@ -1,0 +1,32 @@
+.archived-card {
+  border-top: 4px solid #8c8c8c;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(140, 140, 140, 0.2);
+  }
+
+  .ant-card-body {
+    padding: 20px;
+  }
+
+  .archived-title {
+    color: #8c8c8c;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .archived-icon {
+    color: #8c8c8c;
+    font-size: 24px;
+  }
+
+  .archived-value {
+    color: #8c8c8c;
+    font-size: 32px;
+    font-weight: 700;
+  }
+}

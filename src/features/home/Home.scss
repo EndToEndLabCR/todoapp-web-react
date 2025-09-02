@@ -1,0 +1,105 @@
+// Variables
+$primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$background-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+$white: white;
+$shadow-light: 0 4px 20px rgba(0, 0, 0, 0.1);
+$shadow-badge: 0 2px 8px rgba(24, 144, 255, 0.3);
+$text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+$border-radius: 12px;
+$transition: all 0.3s ease;
+
+.dashboard-container {
+  padding: 24px;
+  background: $background-gradient;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  margin-bottom: 24px;
+  border-radius: $border-radius;
+  box-shadow: $shadow-light;
+  background: $primary-gradient;
+  border: none;
+  
+  .ant-card-body {
+    background: transparent;
+  }
+}
+
+.dashboard-icon {
+  font-size: 32px;
+  color: $white;
+  text-shadow: $text-shadow;
+}
+
+.dashboard-title {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  color: $white !important;
+  margin: 0 !important;
+  text-shadow: $text-shadow;
+}
+
+.dashboard-subtitle {
+  font-size: 16px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin-top: 4px !important;
+}
+
+.total-badge {
+  .ant-badge-count {
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: $shadow-badge;
+  }
+}
+
+.stats-icon {
+  font-size: 24px;
+  color: $white;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+}
+
+.section-divider {
+  margin: 32px 0;
+  border-color: rgba(0, 0, 0, 0.1);
+  
+  .ant-divider-inner-text {
+    color: #8c8c8c;
+    font-weight: 500;
+  }
+}
+
+.dashboard-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 16px;
+  }
+  
+  .dashboard-title {
+    font-size: 24px !important;
+  }
+  
+  .dashboard-header {
+    .ant-card-body {
+      padding: 16px 20px !important;
+    }
+  }
+  
+  .dashboard-icon {
+    font-size: 24px;
+  }
+  
+  .stats-icon {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
