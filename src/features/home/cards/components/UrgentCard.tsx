@@ -9,7 +9,6 @@ export function UrgentCard() {
         title={<span className="urgent-title">Urgent</span>}
         value={4}
         prefix={<BellOutlined className="urgent-icon" />}
-        valueStyle={{ className: "urgent-value" }}
       />
     </Card>
   );

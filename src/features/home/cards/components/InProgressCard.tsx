@@ -18,7 +18,6 @@ export function InProgressCard() {
           }
           value={10}
           prefix={<Loading3QuartersOutlined className="in-progress-icon" />}
-          valueStyle={{ className: "in-progress-value" }}
         />
       </Card>
     </Tooltip>

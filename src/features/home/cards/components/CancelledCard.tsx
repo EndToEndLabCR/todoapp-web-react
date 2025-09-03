@@ -9,7 +9,6 @@ export function CancelledCard() {
         title={<span className="cancelled-title">Cancelled</span>}
         value={6}
         prefix={<CloseCircleOutlined className="cancelled-icon" />}
-        valueStyle={{ className: "cancelled-value" }}
       />
     </Card>
   );

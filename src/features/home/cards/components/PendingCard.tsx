@@ -9,7 +9,6 @@ export function PendingCard() {
         title={<span className="pending-title">Pending</span>}
         value={5}
         prefix={<ClockCircleOutlined className="pending-icon" />}
-        valueStyle={{ className: "pending-value" }}
       />
     </Card>
   );

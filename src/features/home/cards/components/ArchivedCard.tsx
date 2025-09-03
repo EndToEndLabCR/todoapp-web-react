@@ -9,7 +9,6 @@ export function ArchivedCard() {
         title={<span className="archived-title">Archived</span>}
         value={3}
         prefix={<FileZipFilled className="archived-icon" />}
-        valueStyle={{ className: "archived-value" }}
       />
     </Card>
   );

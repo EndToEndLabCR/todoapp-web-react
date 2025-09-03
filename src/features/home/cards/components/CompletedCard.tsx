@@ -18,7 +18,6 @@ export function CompletedCard() {
           }
           value={25}
           prefix={<CheckCircleOutlined className="completed-icon" />}
-          valueStyle={{ className: "completed-value" }}
         />
       </Card>
     </Tooltip>
