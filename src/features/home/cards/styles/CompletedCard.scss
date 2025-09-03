@@ -1,0 +1,45 @@
+.completed-card {
+  border-top: 4px solid #52c41a;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(82, 196, 26, 0.2);
+  }
+
+  .ant-card-body {
+    padding: 20px;
+  }
+
+  .completed-title {
+    color: #52c41a;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .info-icon {
+      font-size: 12px;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .completed-icon {
+    color: #52c41a;
+    font-size: 24px;
+  }
+
+  .completed-value {
+    color: #52c41a;
+    font-size: 32px;
+    font-weight: 700;
+  }
+}

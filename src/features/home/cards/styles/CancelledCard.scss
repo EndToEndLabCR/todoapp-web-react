@@ -1,0 +1,32 @@
+.cancelled-card {
+  border-top: 4px solid #ff4d4f;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(255, 77, 79, 0.2);
+  }
+
+  .ant-card-body {
+    padding: 20px;
+  }
+
+  .cancelled-title {
+    color: #ff4d4f;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .cancelled-icon {
+    color: #ff4d4f;
+    font-size: 24px;
+  }
+
+  .cancelled-value {
+    color: #ff4d4f;
+    font-size: 32px;
+    font-weight: 700;
+  }
+}

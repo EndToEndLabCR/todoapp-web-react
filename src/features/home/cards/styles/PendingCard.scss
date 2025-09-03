@@ -1,0 +1,32 @@
+.pending-card {
+  border-top: 4px solid #faad14;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(250, 173, 20, 0.2);
+  }
+
+  .ant-card-body {
+    padding: 20px;
+  }
+
+  .pending-title {
+    color: #faad14;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .pending-icon {
+    color: #faad14;
+    font-size: 24px;
+  }
+
+  .pending-value {
+    color: #faad14;
+    font-size: 32px;
+    font-weight: 700;
+  }
+}

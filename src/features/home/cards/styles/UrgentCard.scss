@@ -1,0 +1,32 @@
+.urgent-card {
+  border-top: 4px solid #f5222d;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(245, 34, 45, 0.2);
+  }
+
+  .ant-card-body {
+    padding: 20px;
+  }
+
+  .urgent-title {
+    color: #f5222d;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .urgent-icon {
+    color: #f5222d;
+    font-size: 24px;
+  }
+
+  .urgent-value {
+    color: #f5222d;
+    font-size: 32px;
+    font-weight: 700;
+  }
+}

@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Layout, theme } from "antd";
 import { AppFooter } from "./shared/components/layout/footer/Footer";
 import { SiderMenu } from "./shared/components/layout/sider-menu/SiderMenu";
-import { AppHeader } from "./shared/components/layout/header/Header";
+import { AppHeader } from "./shared/components/layout/header/components";
 import { AppRoutes } from "./routes/AppRoutes";
 
 const { Content } = Layout;
