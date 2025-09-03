@@ -1,5 +1,5 @@
 import "./App.css";
-
+import { useLocation } from "react-router-dom";
 import { Layout, theme } from "antd";
 import { AppFooter } from "./shared/components/layout/footer/Footer";
 import { SiderMenu } from "./shared/components/layout/sider-menu/SiderMenu";
@@ -13,12 +13,14 @@ function App() {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
 
+  const location = useLocation();
+  const isLogin = location.pathname === "/login";
+
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <SiderMenu />
-
+      {!isLogin && <SiderMenu />}   
       <Layout>
-        <AppHeader />
+        {!isLogin && <AppHeader />} 
 
         <Content style={{ margin: "24px 16px 0" }}>
           <div
@@ -33,7 +35,7 @@ function App() {
           </div>
         </Content>
 
-        <AppFooter />
+        {!isLogin && <AppFooter />}
       </Layout>
     </Layout>
   );
