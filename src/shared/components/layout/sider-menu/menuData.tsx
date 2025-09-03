@@ -14,43 +14,43 @@ import React from "react";
 import type { ItemType } from "antd/es/menu/interface";
 
 type MenuItemInfo = {
+  key: string;
   label: string;
   icon: React.ComponentType<any>;
 };
 export const todoItemsData: MenuItemInfo[] = [
-  { label: "Home", icon: HomeOutlined },
-  { label: "Today", icon: CalendarOutlined },
-  { label: "Week", icon: ScheduleOutlined },
-  { label: "Importants", icon: StarOutlined },
-  { label: "Completed", icon: CheckCircleOutlined },
-  { label: "Pending", icon: Loading3QuartersOutlined },
-  { label: "Archived", icon: FileZipFilled },
+  { key: "/", label: "Home", icon: HomeOutlined },
+  { key: "/calendar/today", label: "Today", icon: CalendarOutlined },
+  { key: "/calendar/week", label: "Week", icon: ScheduleOutlined },
+  { key: "/calendar/important", label: "Importants", icon: StarOutlined },
+  { key: "/calendar/completed", label: "Completed", icon: CheckCircleOutlined },
+  { key: "/calendar/pending", label: "Pending", icon: Loading3QuartersOutlined },
+  { key: "/calendar/archived", label: "Archived", icon: FileZipFilled },
 ];
 
 export const projectItemsData: MenuItemInfo[] = [
-  { label: "Work", icon: HomeOutlined },
-  { label: "Personal", icon: CalendarOutlined },
-  { label: "University", icon: ScheduleOutlined },
+  { key: "/projects/work", label: "Work", icon: HomeOutlined },
+  { key: "/projects/personal", label: "Personal", icon: CalendarOutlined },
+  { key: "/projects/university", label: "University", icon: ScheduleOutlined },
 ];
 
 export const moreItemsData: MenuItemInfo[] = [
-  { label: "Settings", icon: SettingOutlined },
+  { key: "/more/settings", label: "Settings", icon: SettingOutlined },
 ];
 
 export const generateMenuItems = (
   items: MenuItemInfo[],
-  prefix = ""
 ): ItemType[] =>
-  items.map(({ label, icon }, index) => ({
-    key: `${prefix}${index + 1}`,
+  items.map(({ key, label, icon }) => ({
+    key,
     icon: React.createElement(icon),
     label,
   }));
 
 export const groupedMenuItems = () => {
-  const todoItems = generateMenuItems(todoItemsData, "todo-");
-  const projectItems = generateMenuItems(projectItemsData, "proj-");
-  const moreItems = generateMenuItems(moreItemsData, "config-");
+  const todoItems = generateMenuItems(todoItemsData);
+  const projectItems = generateMenuItems(projectItemsData);
+  const moreItems = generateMenuItems(moreItemsData);
 
   return [
     {
