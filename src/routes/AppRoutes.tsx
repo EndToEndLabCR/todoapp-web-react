@@ -7,6 +7,7 @@ import { Today } from "../features/calendar/today/Today";
 import { Week } from "../features/calendar/week/Week";
 import { Home } from "../features/home/Home";
 import { Login } from "../features/login/Login";
+import { Register } from "../features/register/Register";
 import { Settings } from "../features/more/settings/Settings";
 import { Personal } from "../features/projects/personal/Personal";
 import { University } from "../features/projects/university/University";
@@ -20,6 +21,9 @@ export function AppRoutes() {
 
       {/* Login */}
       <Route path="/login" element={<Login />} />
+
+      {/* Register */}
+      <Route path="/register" element={<Register />} />
 
       {/* Calendar */}
       <Route path="/calendar/today" element={<Today />} />

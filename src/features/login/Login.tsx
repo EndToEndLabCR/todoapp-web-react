@@ -39,8 +39,8 @@ export function Login() {
           </Form.Item>
 
           <div className="login-links">
-            <a href="#">Sign Up</a> &nbsp; 
-            <a href="#">Forgot Password</a>
+            <a href="/register">Sign Up</a> &nbsp; 
+            <a href="#">Forgot Password?</a>
           </div>
         </Form>
       </Card>
