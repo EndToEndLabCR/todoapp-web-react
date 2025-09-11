@@ -3,6 +3,7 @@ import { Button, Card, Form, Input } from "antd";
 import "./Register.scss";
 
 export function Register() {
+  const [form] = Form.useForm();
     return (
     <div className="register-container">
         <Card title="Create your account" bordered={false} className="register-card">
@@ -48,7 +49,17 @@ export function Register() {
         <Form.Item
         label="Confirm Password"
         name="confirmPassword"
-        rules={[{ required: true, message: "Please confirm your password!" }]}
+        rules={[
+              { required: true, message: "Please confirm your password!" },
+              ({ getFieldValue }) => ({
+                validator(_, value) {
+                  if (!value || getFieldValue('password') === value) {
+                    return Promise.resolve();
+                  }
+                  return Promise.reject(new Error('The two passwords do not match!'));
+                },
+              }),
+            ]}
         >
           <Input.Password
             size="large"
@@ -63,7 +74,7 @@ export function Register() {
             </Button>
           </Form.Item>
 
-          <div className="register-form-footer">
+          <div className="register-link">
             <span>Already have an account? </span>
             <a href="/login">Login</a>
           </div>
