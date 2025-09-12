@@ -1,10 +1,10 @@
-import "./App.css";
-import { useLocation } from "react-router-dom";
 import { Layout, theme } from "antd";
-import { AppFooter } from "./shared/components/layout/footer/Footer";
-import { SiderMenu } from "./shared/components/layout/sider-menu/SiderMenu";
-import { AppHeader } from "./shared/components/layout/header/components";
+import { useLocation } from "react-router-dom";
+import "./App.css";
 import { AppRoutes } from "./routes/AppRoutes";
+import { AppFooter } from "./shared/components/layout/footer/Footer";
+import { AppHeader } from "./shared/components/layout/header/components";
+import { SiderMenu } from "./shared/components/layout/sider-menu/SiderMenu";
 
 const { Content } = Layout;
 
@@ -15,12 +15,13 @@ function App() {
 
   const location = useLocation();
   const isLogin = location.pathname === "/login";
+  const isRegister = location.pathname === "/register";
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      {!isLogin && <SiderMenu />}   
+      {!isLogin && !isRegister && <SiderMenu />}   
       <Layout>
-        {!isLogin && <AppHeader />} 
+        {!isLogin && !isRegister && <AppHeader />} 
 
         <Content style={{ margin: "24px 16px 0" }}>
           <div
@@ -35,7 +36,7 @@ function App() {
           </div>
         </Content>
 
-        {!isLogin && <AppFooter />}
+        {!isLogin && !isRegister && <AppFooter />}
       </Layout>
     </Layout>
   );
