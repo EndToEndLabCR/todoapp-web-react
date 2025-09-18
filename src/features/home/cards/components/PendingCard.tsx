@@ -1,16 +1,39 @@
-import { Statistic, Card } from "antd";
-import { ClockCircleOutlined } from "@ant-design/icons";
+import { Statistic, Card, Tooltip } from "antd";
+import { ClockCircleOutlined, InfoCircleOutlined, HourglassOutlined } from "@ant-design/icons";
 import "../styles/PendingCard.scss";
 
 export function PendingCard() {
   return (
-    <Card className="pending-card">
-      <Statistic
-        title={<span className="pending-title">Pending</span>}
-        value={5}
-        prefix={<ClockCircleOutlined className="pending-icon" />}
-        valueStyle={{ className: "pending-value" }}
-      />
-    </Card>
+    <Tooltip 
+      title="Tasks that are waiting to be started or assigned"
+      placement="top"
+    >
+      <Card className="pending-card">
+        <div className="card-background-pattern"></div>
+        <div className="card-content">
+          <div className="icon-section">
+            <div className="main-icon-container">
+              <ClockCircleOutlined className="pending-icon" />
+              <div className="icon-ring"></div>
+            </div>
+            <div className="secondary-icon">
+              <HourglassOutlined />
+            </div>
+          </div>
+          <div className="stats-section">
+            <Statistic
+              title={
+                <span className="pending-title">
+                  Pending
+                  <InfoCircleOutlined className="info-icon" />
+                </span>
+              }
+              value={5}
+              className="statistic-custom"
+            />
+          </div>
+        </div>
+      </Card>
+    </Tooltip>
   );
 }
