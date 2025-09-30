@@ -40,7 +40,7 @@ export function Login() {
 
           <div className="login-links">
             <a href="/register">Sign In</a> &nbsp; 
-            <a href="#">Forgot Password?</a>
+            <a href="/forget-password">Forgot Password?</a>
           </div>
         </Form>
       </Card>

@@ -16,12 +16,14 @@ function App() {
   const location = useLocation();
   const isLogin = location.pathname === "/login";
   const isRegister = location.pathname === "/register";
+  const isForgetPassword = location.pathname === "/forget-password";
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      {!isLogin && !isRegister && <SiderMenu />}   
+      {!isLogin && !isRegister && !isForgetPassword && <SiderMenu />}
+      {}   
       <Layout>
-        {!isLogin && !isRegister && <AppHeader />} 
+        {!isLogin && !isRegister && !isForgetPassword && <AppHeader />} 
 
         <Content style={{ margin: "24px 16px 0" }}>
           <div
@@ -36,7 +38,7 @@ function App() {
           </div>
         </Content>
 
-        {!isLogin && !isRegister && <AppFooter />}
+        {!isLogin && !isRegister && !isForgetPassword && <AppFooter />}
       </Layout>
     </Layout>
   );
